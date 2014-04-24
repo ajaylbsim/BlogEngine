@@ -1,0 +1,6 @@
+{
+    "name":"Base-Framework",
+    "description":"This module defines the base framework for the MSS server app. We manage the conventions here.",
+    "main":"./lib/main",
+    "bcrypt":"*"
+}

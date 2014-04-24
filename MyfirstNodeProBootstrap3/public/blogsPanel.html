@@ -1,0 +1,89 @@
+
+
+<div class="panel" style="margin-top:0px; height:526px">
+    <div class="panel-body">
+        <div class="row">
+            <br>
+
+            <div class="navbar-default navbar-static-side" role="navigation" style="width:20%;float:left">
+                <div class="sidebar-collapse">                    <ul class="nav" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li style="border-bottom: 1px solid #e7e7e7;">
+                        <a href="#adminDashBoard"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    <li style="border-bottom: 1px solid #e7e7e7;">
+                        <a href="#authorPanel"><i class="fa fa-dashboard fa-fw"></i> Authors</a>
+                    </li> <li style="border-bottom: 1px solid #e7e7e7;">
+                    <a href="#blogPanel"><i class="fa fa-dashboard fa-fw"></i>Blogs</a>
+                </li> <li style="border-bottom: 1px solid #e7e7e7;">
+                    <a href=""><i class="fa fa-dashboard fa-fw"></i>Recent Activity</a>
+                </li>
+                </ul>
+
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+
+
+
+            <div class="col-lg-8" style="margin-left:252px;margin-top: -200px">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Blog Summary
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="table-responsive table-bordered">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th  style="color: #000000;padding-left:100px">Blog Id</th>
+                                    <th  style="color: #000000;padding-left:100px">Blog Title</th>
+                                    <th  style="color: #000000;padding-left:100px">Blog Author</th>
+                                    <th  style="color: #000000;padding-left:100px">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody data-ng-repeat="blog in blogArray">
+                                <tr >
+                                    <td  style="color: #000000">{{blog._id}}</td>
+                                    <td  style="color: #000000">{{blog.BlogTitle}}</td>
+                                    <td  style="color: #000000">{{blog.BlogAuthor.name}}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                Action <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#/editBlog/{{blog._id}}"><i class="icon-pencil"></i> Edit</a></li>
+                                                <li><a href="" data-ng-click="remove(blog._id)"><i class="icon-trash"></i> Delete</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </td> </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<!--/stories-->

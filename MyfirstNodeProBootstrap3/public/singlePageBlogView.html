@@ -1,0 +1,83 @@
+<div class="panel">
+    <div class="panel-body">
+        <div class="row">
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-img" href="#"><img src="ajay.JPG" style="width:100px;height:100px"
+                                                   class="img-circle"></a>            </div>
+            <div class="col-md-10 col-sm-9">
+                <h3 style="color: black;margin-right: 277px;}"> {{Obj.BlogTitle}}</h3>
+
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p data-ng-bind-html="bindContent(Obj.BlogContent)" style="color: #000000; text-align: left;font-size: 14px;
+                        line-height:25px"></p>
+
+                        <ul class="list-inline">
+                            <li><a href="#" >By {{Obj.BlogAuthor.name}} ON 02-09-2012</a> </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-comment"></i> {{Obj.BlogComments.length|count:'comment'}} </a></li>
+                            <li><a href="" data-ng-click="fbShare()"><i class="glyphicon glyphicon-share"></i> {{Obj.BlogLikes.length|count:'share'}}</a></li>
+                        </ul>
+                    </div>
+                    <br><br><br><br><br><br>
+                    <div class="col-xs-3"></div>
+                </div>
+                  <div >
+                <div class="row" data-ng-repeat=" comment in  Obj.BlogComments" >
+                    <div class="col-xs-8" style="margin-left: 46px">
+
+                        <p style="margin-bottom: -16px;margin-left:-48px ;color:brown;font-size: 17px;"><a href="" data-ng-click="diaprove(comment.name)"><i class="icon-remove-sign"></i></a>
+                            By {{comment.name}}</p>
+
+                     <div id="comment-View" ng-model="commentView"  rows="4" cols="3"
+                                   style=" padding-left:-1%;margin-top:02% ;
+                                 margin-left:-50px; margin-bottom:2%;float:left;background-color: #ffffff;
+                                   color:#000000;padding-top: 2px; width: 100%; overflow-wrap: break-word; ">{{comment.message}}
+
+                     </div>
+
+                    </div>
+
+                     </div>
+                    <br><br><br><br><br><br>
+
+
+
+                <div class="row" style="margin-top: -50px">
+                    <div class="col-xs-8" style="margin-left: 46px">
+                        <textarea id="text-input" ng-model="commentText" ng-change="getCommentText()" rows="4" cols="3"
+                                  placeholder="Leave a comment !!" style=" padding-left:2%;margin-top:0% ;
+                margin-left:-50px;float:left;background-color: #ffffff;padding-top: 2px; width: 100%; "></textarea>
+
+
+
+                </div>
+                <br><br>
+
+                           <form id="postYourComment" class="form col-md-12 center-block" action="" method="post"
+                                          style="margin-top: 7px;width: 38%;margin-left: 0%;">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" data-ng-model="user_name" placeholder="Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control input-lg" data-ng-model="user_email"  placeholder="Email">
+                                        </div>
+
+                                        <div class="form-group" data-ng-click="post(Obj.BlogTitle)">
+                                            <button id="abc" class="btn-primary btn-lg btn-block" >Post</button>
+                                        </div>
+                                    </form>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/stories-->
+
+
+

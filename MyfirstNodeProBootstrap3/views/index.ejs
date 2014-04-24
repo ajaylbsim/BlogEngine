@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Bootply"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+
+<!-- CSS code from Bootply.com editor -->
+
+<style type="text/css">
+    .navbar-form input, .form-inline input {
+        width: auto;
+    }
+
+    body {
+        padding-top: 50px;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #ededed;
+    }
+
+    #masthead {
+        min-height: 199px;
+    }
+
+    #masthead h1 {
+        font-size: 55px;
+        line-height: 1;
+        margin-top: 50px;
+    }
+
+    #masthead .well {
+        margin-top: 31px;
+        min-height: 127px;
+    }
+
+    .navbar.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .story-img {
+        margin-top: 25%;
+        display: block;
+    }
+
+    a, a:hover {
+        color: #223344;
+        text-decoration: none;
+    }
+
+    .icon-bar {
+        background-color: #fff;
+    }
+
+    @media screen and (min-width: 768px) {
+        #masthead h1 {
+            font-size: 80px;
+        }
+    }
+
+    .dropdown-menu {
+        min-width: 250px;
+    }
+
+    .panel {
+        border-color: transparent;
+        border-radius: 0;
+    }
+
+    .thumbnail {
+        margin-bottom: 8px;
+    }
+
+    .img-container {
+        overflow: hidden;
+        height: 170px;
+    }
+
+    .img-container img {
+        min-width: 280px;
+        min-height: 180px;
+        max-width: 380px;
+        max-height: 280px;
+    }
+
+    .txt-container {
+        overflow: hidden;
+        height: 100px;
+    }
+
+    .panel .lead {
+        overflow: hidden;
+        height: 90px;
+    }
+
+    .label-float {
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        opacity: .9;
+        padding: 6px;
+        color: #fff;
+    }
+
+    #view {
+
+        text-align: left;
+        font-size: large;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.428571429;
+    }
+
+    #about {
+
+        text-align: left;
+        font-size: large;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.428571429;
+    }
+
+    #title {
+        margin-right: 671px;
+        margin-bottom: 8px;
+        margin-top: 13px;
+    }
+
+    #titleAbout {
+        margin-right: 370px;
+        margin-bottom: 8px;
+        margin-top: 13px;
+    }
+
+    #readmore {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.428571429;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        margin-right: 831px;
+        margin-left: -14px;
+        margin-top: -62px;
+    }
+
+    .popover {
+        max-width: 1000px;
+    }
+
+    #img1:hover {
+        height: 400px;
+    }
+
+    .btn-twitter {
+        background-color: #4099FF;
+        color: #fff;
+    }
+
+    .btn-facebook {
+        background-color: #3B5998;
+        color: #fff;
+    }
+
+    .btn-google-plus {
+        background-color: #d34836;
+        color: #fff;
+    }
+
+    .btn-twitter:hover {
+        background-color: #3088FF;
+        color: #62BBFF;
+    }
+
+    .btn-facebook:hover {
+        background-color: #2A4998;
+        color: #4C6BBA;
+    }
+
+    .btn-google-plus:hover {
+        background-color: #C23836;
+        color: #E45A58;
+    }
+
+</style>
+
+
+<style>
+    .help-inline {
+
+        color: firebrick;
+
+    }
+</style>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Blog Engine</title>
+
+<!-- Bootstrap Core CSS -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<!-- Fonts -->
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+      type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+      type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Custom Theme CSS -->
+<link href="css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom" data-ng-controller="mainCtrl">
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="height: 6px">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#page-top">
+                <i class="fa fa-play-circle"></i> <span class="light">Start</span> Blog Engine
+            </a>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#about">About</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#check" data-ng-click="viewVisitorsBlog()">Viewblogs</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#contact" onclick="check()">Login<a href="#gjgjg"></a></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+
+
+<section  id="intro" class="intro" style="margin-top: 24PX">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p class="intro-text" style="color:#ff0000"><%=message%></p>
+
+                    <h2 class="brand-heading">Blog Engine</h2>
+                    <a class="navbar-brand" href="#page-top">
+
+                    </a>
+
+                    <p class="intro-text">Blog Engine Gives you a platform to tell the world your story !!</p>
+
+                    <div class="page-scroll">
+                        <a href="#about" class="btn btn-circle">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" style="padding-top: 100px" class="container content-section text-center">
+    <div class="row" style="height: 200px">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h3 id="titleAbout">BlogEngine !!</h3>
+
+            <p id="about"><b>BlogEngine</b> Blogging, blogging, blogging. You hear us say how important it is
+                for you to blog. But you think, what is a blog and who has time for it? And why should I blog, anyway?
+                Many of you don’t blog because you don’t have a blog, or because you don’t see how the investment of
+                time
+                is going to help your business. Having a frequently-updated blog can be one of your most powerful
+                weapons in
+                your web marketing arsenal because it can be indexed and ranked by search engines
+                . Here we give you a simplified run-down of how some of it works so you can get the most out of your
+                blog.
+                <b> What is a blog? </b>
+                Blogger puts it very simple when they say " a blog is a web site, where you
+                write stuff on an ongoing basis. New stuff shows up at the top, so your visitors can read what's new.
+                Then they comment on it or link to it or email you. Or not."
+
+
+            <ul>
+                <b>Advantages of writing your own</b>
+                <li> It's fun</li>
+                <li> You might learn new programming tricks or techniques</li>
+                <li> Using a software you wrote is more satisfying than using someone else's</li>
+                <li> It will be exactly as you want it</li>
+                <li> Content on your blog can be beefed up with search engine keywords.</li>
+                <li>Search engines reward sites that are dynamic..</li>
+            </ul>
+            .</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="download" class="content-section text-center" style="padding-top:80px">
+    <div class="intro-body">
+        <div class="container" style="margin-top: -50px">
+
+            <!--/stories-->
+            <div class="row" style="background-color:#000000; height:200px" data-ng-repeat="title in blogContainer">
+                <br>
+                -
+                <div class="col-md-2 col-sm-3 text-center">
+                    <a class="story-img" href="#"><img id="img1" src="ajay2.jpg" style="width:100px;height:100px"
+                                                       class="img-circle hero-avatar-image"></a>
+                </div>
+                <div class="col-md-10 col-sm-9">
+                    <h3 id="title">A Story About Me!!</h3>
+
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <!--  <div ng-bind-html="convert(title)"></div>-->
+
+                            <p id="view" style="text-align:left">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie
+                                tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
+                                nisi.
+                                Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in
+                                felis sit amet augue.</p>
+
+                            <p class="lead">
+                                <button id="readmore" class="btn btn-default">Read More</button>
+                            </p>
+                            <p class="pull-right"><span class="label label-default">keyword</span> <span
+                                        class="label label-default">tag</span> <span
+                                        class="label label-default">post</span></p>
+                            <ul class="list-inline">
+                                <li><a href="#">2 Days Ago</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3"></div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="container content-section text-center" style="margin-top: 20px">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2 style="margin-top: -20%">Login Please !!</h2>
+
+            <div id="login_module" class="modal-content" style="margin-top: 0%;margin-right: 26%;margin-left: 25%">
+                <div class="modal-header">
+                    <button id="close" type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                            style="margin-top: -15px;margin-right: -4px">×
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <form id="registerHere" class="form col-md-12 center-block" action="login" method="post"
+                          style="margin-top: -13px">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" name="user_email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control input-lg" name="user_password"
+                                   placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <button id="signin" class="btn btn-primary btn-lg btn-block">Sign In</button>
+                            <span class="pull-right"><a href="#about" onclick="hide()">SignUp</a></span><span><a href="#">Need
+                                    help?</a></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12">
+                        <button class="btn" data-dismiss="modal" hidden="true" aria-hidden="true" data-ng-hide="true">
+                            cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- JavaScript jQuery code from Bootply.com editor -->
+            <ul class="list-inline banner-social-buttons">
+                <li><a href="/auth/facebook" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span
+                                class="network-name">Facebook</span></a>
+                </li>
+                <li><a href="/auth/github" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span
+                                class="network-name">Github</span></a>
+                </li>
+                <li><a href="/auth/google" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span
+                                class="network-name">Google+</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="signup" class="container content-section text-center">
+<div class="row">
+<div class="col-lg-12 col-lg-offset-0">
+<h2 style="margin-top: -14%">Signup Please !!</h2>
+
+<div id="login_module" class="modal-content" style="margin-top: 0%;margin-right: 26%;margin-left: 25%">
+<div class="modal-header">
+    <button id="close" type="button" class="close" data-dismiss="modal" aria-hidden="true"
+            style="margin-top: -15px;margin-right: -4px">×
+    </button>
+
+</div>
+<div class="modal-body">
+    <form id="registerSIGNUP" class="form col-md-12 center-block" action="signup" method="post"
+          style="margin-top: -13px">
+        <div class="form-group">
+            <input type="text" class="form-control input-lg" name="user_name" placeholder="userName">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control input-lg" name="user_email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control input-lg" name="user_password"
+                   placeholder="Password">
+        </div>
+        <div class="form-group">
+                            <span>
+
+                                <select name="birthday_month" id="month" class="_5dba">
+                                    <option value="0" selected="1">Month</option>
+                                    <option value="1">Jan</option>
+                                    <option value="2">Feb</option>
+                                    <option value="3">Mar</option>
+                                    <option value="4">Apr</option>
+                                    <option value="5">May</option>
+                                    <option value="6">Jun</option>
+                                    <option value="7">Jul</option>
+                                    <option value="8">Aug</option>
+                                    <option value="9">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                            <select name="birthday_day" id="day" class="_5dba">
+                                <option value="0" selected="1">Day</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                                <select name="birthday_year" id="year" class="_5dba">
+                                    <option value="0" selected="1">Year</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                    <option value="1969">1969</option>
+                                    <option value="1968">1968</option>
+                                    <option value="1967">1967</option>
+                                    <option value="1966">1966</option>
+                                    <option value="1965">1965</option>
+                                    <option value="1964">1964</option>
+                                    <option value="1963">1963</option>
+                                    <option value="1962">1962</option>
+                                    <option value="1961">1961</option>
+                                    <option value="1960">1960</option>
+                                    <option value="1959">1959</option>
+                                    <option value="1958">1958</option>
+                                    <option value="1957">1957</option>
+                                    <option value="1956">1956</option>
+                                    <option value="1955">1955</option>
+                                    <option value="1954">1954</option>
+                                    <option value="1953">1953</option>
+                                    <option value="1952">1952</option>
+                                    <option value="1951">1951</option>
+                                    <option value="1950">1950</option>
+                                    <option value="1949">1949</option>
+                                    <option value="1948">1948</option>
+                                    <option value="1947">1947</option>
+                                    <option value="1946">1946</option>
+                                    <option value="1945">1945</option>
+                                    <option value="1944">1944</option>
+                                    <option value="1943">1943</option>
+                                    <option value="1942">1942</option>
+                                    <option value="1941">1941</option>
+                                    <option value="1940">1940</option>
+                                    <option value="1939">1939</option>
+                                    <option value="1938">1938</option>
+                                    <option value="1937">1937</option>
+                                    <option value="1936">1936</option>
+                                    <option value="1935">1935</option>
+                                    <option value="1934">1934</option>
+                                    <option value="1933">1933</option>
+                                    <option value="1932">1932</option>
+                                    <option value="1931">1931</option>
+                                    <option value="1930">1930</option>
+                                    <option value="1929">1929</option>
+                                    <option value="1928">1928</option>
+                                    <option value="1927">1927</option>
+                                    <option value="1926">1926</option>
+                                    <option value="1925">1925</option>
+                                    <option value="1924">1924</option>
+                                    <option value="1923">1923</option>
+                                    <option value="1922">1922</option>
+                                    <option value="1921">1921</option>
+                                    <option value="1920">1920</option>
+                                    <option value="1919">1919</option>
+                                    <option value="1918">1918</option>
+                                    <option value="1917">1917</option>
+                                    <option value="1916">1916</option>
+                                    <option value="1915">1915</option>
+                                    <option value="1914">1914</option>
+                                    <option value="1913">1913</option>
+                                    <option value="1912">1912</option>
+                                    <option value="1911">1911</option>
+                                    <option value="1910">1910</option>
+                                    <option value="1909">1909</option>
+                                    <option value="1908">1908</option>
+                                    <option value="1907">1907</option>
+                                    <option value="1906">1906</option>
+                                    <option value="1905">1905</option>
+                                </select>
+                                <span class="_5k_2 _5dba"><input type="radio" name="gender" value="1" id="u_0_d"><label
+                                            class="_58mt" for="u_0_d" style="color: #000000">Male</label></span>
+                                <span class="_5k_2 _5dba"><input type="radio" name="gender" value="1" id="u_0_d"><label
+                                            class="_58mt" for="u_0_d" style="color: #000000">Female</label></span>
+                            </span>
+        </div>
+        <div class="form-group">
+            <button id="SIGNUP" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+                            <span><a href="#about">Need
+                                    help?</a></span>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="col-md-12">
+        <button class="btn" data-dismiss="modal" hidden="true" aria-hidden="true" data-ng-hide="true">
+            cancel
+        </button>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<div id="map"></div>
+
+<div id="check" style="margin-top:0px ;background-color: #ffffff">
+
+    <section id="visitor" class="container content-section text-center" style="background-color:#ffffff;width: 100%">
+
+    <div class="panel" data-ng-repeat="obj in arrayOfblogObj">
+        <div class="panel-body">
+            <div class="row">
+                <br>
+                <div class="col-md-2 col-sm-3 text-center">
+                    <a class="story-img" href="#"><img src="ajay.JPG" style="width:100px;height:100px"
+                                                       class="img-circle"></a>
+                </div>
+                <div class="col-md-10 col-sm-9">
+                    <h3 style="color:#000000 ;text-align: left">  {{obj.BlogTitle}}</h3>
+                    <div class="row">
+                        <div class="col-xs-9" >
+                            <div style="height: 130px;overflow: hidden">
+                            <p  data-ng-bind-html="convert(obj.BlogContent)" style="color: #000000; text-align: left"></p>
+                            </div>
+                            <p class="lead">
+                                <button class="btn btn-default"><a href=""data-ng-click="readBlog(obj.BlogTitle)">Read More</a></button>
+                            </p>
+                            <p class="pull-right">
+
+
+                            <ul class="list-inline">
+                                <li><a href="#">By {{obj.BlogAuthor.name}} ON 02-09-2012 </a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> {{obj.BlogComments.length|count:'comment'}}</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-share"></i>{{obj.BlogLikes.length|count:'share'}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3"></div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+            <hr>
+            <!--/stories-->
+        </div>
+    </div>
+
+    </section>
+    <section id="visitorSinglepage" class="container content-section text-center" style="background-color:#ffffff;width: 100%">
+
+    <div class="panel" >
+        <div class="panel-body">
+            <div class="row">
+                <br>
+                <div class="col-md-2 col-sm-3 text-center">
+                    <a class="story-img" href="#"><img src="ajay.JPG" style="width:100px;height:100px"
+                                                       class="img-circle"></a>            </div>
+                <div class="col-md-10 col-sm-9">
+                    <h3 style="color: black;margin-right: 277px;}"> {{Obj.BlogTitle}}</h3>
+
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <p  data-ng-bind-html="convert(Obj.BlogContent)" style="color: #000000; text-align: left"></p>
+
+                            <ul class="list-inline">
+                                <li><a href="#" >By {{Obj.BlogAuthor.name}} ON 02-09-2012</a> </li>
+                                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> {{Obj.BlogComments.length|count:'comment'}} </a></li>
+                                <li><a href="" data-ng-click="fbShare()"><i class="glyphicon glyphicon-share"></i> {{Obj.BlogLikes.length|count:'share'}}</a></li>
+                            </ul>
+                        </div>
+                        <br><br><br><br><br><br>
+                        <div class="col-xs-3"></div>
+                    </div>
+                    <div >
+                        <div class="row" data-ng-repeat=" comment in  Obj.BlogComments" >
+                            <div class="col-xs-8" style="margin-left: 46px">
+
+                                <p style="margin-bottom: -16px;margin-left:-737px ;color:brown;font-size: 17px;">
+                                    By {{comment.name}}</p>
+
+                                <div id="comment-View" ng-model="commentView"  rows="4" cols="3"
+                                     style=" padding-left:-1%;margin-top:02% ;
+                                 margin-left:-50px; margin-bottom:2%;float:left;background-color: #ffffff;
+                                   color:#000000;padding-top: 2px; width: 100%; overflow-wrap: break-word;text-align: left ">{{comment.message}}
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <br><br><br><br><br><br>
+
+
+
+                        <div class="row" style="margin-top: -50px">
+                            <div class="col-xs-8" style="margin-left: 46px">
+                                <textarea id="text-input" ng-model="commentText" ng-change="getCommentText()" rows="4" cols="3"
+                                          placeholder="Leave a comment !!" style=" padding-left:2%;margin-top:0% ;
+                margin-left:-50px;float:left;background-color: #ffffff;padding-top: 2px; width: 100%; "></textarea>
+
+
+
+                            </div>
+                            <br><br>
+
+                            <form id="postYourComment" class="form col-md-12 center-block" action="" method="post"
+                                  style="margin-top: 7px;width: 38%;margin-left: 0%;">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" data-ng-model="user_name" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" data-ng-model="user_email"  placeholder="Email">
+                                </div>
+
+                                <div class="form-group" data-ng-click="post(Obj.BlogTitle)">
+                                    <button id="abc" class="btn-primary btn-lg btn-block" >Post</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    </section>
+
+
+</div>
+
+
+<script type="text/javascript" src="javascript/jquery.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script type="text/javascript" src="javascript/controller.js"></script>
+<script src="javascript/angularroot.js"></script>
+<script src="javascript/myangular.js"></script>
+
+
+<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/jquery.ui.core.js"></script>
+<script type='text/javascript' src="javascript/jquery.validate.js"></script>
+<script type='text/javascript' src="javascript/index_Page.js"></script>
+
+<!-- Core JavaScript Files -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript" src="javascript/markdown.js"></script>
+
+
+
+<!-- Google Maps API Key - You will need to use your own API key to use the map feature -->
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/grayscale.js"></script>
+
+</body>
+
+</html>

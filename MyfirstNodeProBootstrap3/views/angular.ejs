@@ -1,0 +1,42 @@
+
+
+<div style="margin-top: -7%">
+    <textarea id="text-input" ng-model="editorData"  ng-change="convert()"rows="22" cols="5"
+              style=" padding-left:2%;margin-top:0% ;
+  margin-left:-50px;float:left;background-color: #ffffff;padding-top: 2px; width: 55%;
+              ">
+        {{editorData}}
+    </textarea>
+
+
+    <div id="preview" class="container" data-ng-bind-html="previewData"    style="height:inherit;width: 54%;margin-top: 3px;color:#000000;background-color:white;
+     padding-top:2px;margin-left: 50%;margin-top: 7%">
+
+
+    </div>
+
+    <script src="javascript/useMarkdown.js"></script>
+
+
+    <nav class="blog-nav" style="background-color:#f5f5f5;height: 34px; width:1272px;margin-left:-4%">
+
+        <p class="lead">
+            <button class="btn btn-default" style="margin-left: 369px; color:darkred;"
+                    style="background-color: hotpink ; color: darkred" data-ng-click="save()">save
+            </button>
+
+
+            <button class="btn btn-default" style="margin-left: 70px;color: darkred;"
+                    style=" background-color: hotpink;color: darkred;" data-ng-click="publish()">publish
+            </button>
+
+
+        </p>
+
+
+        <a class="blog-nav-item pull-right" id="login" ng-href={{login_href}} ng-model="login" ng-show="{{login}}">{{login|uppercase}}</a>
+
+    </nav>
+
+
+</div>

@@ -1,0 +1,37 @@
+{
+    "common": {
+        "port": 80,
+        "name": "BootCamp test",
+        "serverUrl": "http://localhost:80",
+        "logger": {
+            "fullFormat": "[%level][%name-%pid][%file:%line][%time] - %message",
+            "minimalFormat": "[%name-%pid][%file:%line] - %message",
+            "level": "trace",
+            "appNameToDisplayInLog": "BC",
+            "showHidden": false,
+            "stdout": {
+                "enabled": true
+            }
+        },
+        "dataSource": {
+            "mongo": {
+                "url": "mongodb://localhost:27017/bootcamp",
+                "poolSize": "100",
+                "ignoreConnectionError": true
+            }
+        }
+    },
+    "development": {
+        "port": 3001,
+        "serverUrl": "http://localhost:3001"
+    },
+    "qa": {
+
+    },
+    "test": {
+
+    },
+    "production": {
+
+    }
+}

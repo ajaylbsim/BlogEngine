@@ -1,0 +1,44 @@
+<div class="row" style="margin-top: -242px">
+    <div class="col-lg-15 col-lg-offset-2"  style="margin-left:10px ;margin-right:10px">
+
+        <div class="panel" data-ng-repeat="obj in arrayOfblogObj ">
+            <div class="panel-body">
+                <div class="row">
+                    <br>
+                    <div class="col-md-2 col-sm-3 text-center">
+                        <a class="story-img" href="#"><img src="ajay.JPG" style="width:100px;height:100px"
+                                                           class="img-circle"></a>
+                    </div>
+                    <div class="col-md-10 col-sm-9">
+                        <h3 style="color: #000000 ;margin-right: 300px"  data-ng-bind-html="convert(obj.BlogTitle)">  {{obj.BlogTitle}}</h3>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <p style="color: #000000; height: 168px;overflow:hidden;text-align: left;font-size: 17px " data-ng-bind-html="convert(obj.BlogContent)"> </p>
+
+                                <p class="lead">
+                                    <a href="#userDashBoard">userDashBoard</a>
+                                    <a href="#adminDashBoard">adminDashBoard</a>
+
+                                    <button class="btn btn-default"><a href="#/readBlog/{{obj.BlogTitle}}">Read More</a></button>
+                                </p>
+                                <p class="pull-right">
+
+                            <span
+                                    class="label label-default"><a href="#/editBlog/{{obj.BlogTitle}}">edit</a> </span></p>
+                                <ul class="list-inline">
+                                    <li><a href="#">By {{obj.BlogAuthor.name}} ON 02-09-2012 </a></li>
+                                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> {{obj.BlogComments.length|count:'comment'}}</a></li>
+                                    <li><a href="#"><i class="glyphicon glyphicon-share"></i>{{obj.BlogLikes.length|count:'share'}}</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-3"></div>
+                        </div>
+                        <br><br>
+                    </div>
+                </div>
+                <hr>
+                <!--/stories-->
+            </div>
+        </div>
+    </div>
+</div>

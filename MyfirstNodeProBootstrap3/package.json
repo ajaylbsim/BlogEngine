@@ -1,0 +1,31 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.8",
+    "jade": "*",
+      "passport":"*",
+     "passport-facebook":"*",
+     "passport-twitter":"*",
+     "passport-github":"*",
+      "passport-google":"*",
+      "extend":"*",
+      "ejs":"*",
+      "colors":"*",
+      "async":"*",
+      "mongoose":"*",
+      "markdown":"*",
+      "underscore":"*",
+      "nodemailer":"*",
+      "bcrypt-nodejs":"*",
+      "fb":"*"
+
+
+
+
+  }
+}

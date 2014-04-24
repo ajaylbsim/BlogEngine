@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en"  data-ng-app="myApp">
+<head> <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Blog Engine</title>
+<meta name="generator" content="Bootply"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<!--This  is  required to run angular-->
+<script type="text/javascript" src="javascript/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script type="text/javascript"src="javascript/controller.js">
+
+</script>
+<!--for autocomplete -->
+
+
+<link rel="stylesheet" href="jquery-ui-1.10.4.min.css">
+<link rel="stylesheet" href="jquery-ui-1.10.4.css">
+<script src="jquery-1.10.2.js"></script>
+<script src="jquery-ui-1.10.4.js"></script>
+
+<script src="javascript/myangularForAccount.js"></script>
+
+<!--[if lt IE 9]>
+
+
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+   <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Theme CSS
+    <link href="css/grayscale.css" rel="stylesheet"> -->
+
+
+
+
+    <!-- CSS code from Bootply.com editor -->
+
+
+    <!-- CSS code from Bootply.com editor -->
+
+    <style type="text/css">
+        .navbar-form input, .form-inline input {
+            width: auto;
+        }
+
+        body {
+            padding-top: 50px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #ededed;
+        }
+
+        #masthead {
+            min-height: 199px;
+        }
+        .td {
+            color: #000000;
+        }
+
+        #masthead h1 {
+            font-size: 55px;
+            line-height: 1;
+            margin-top: 50px;
+        }
+
+        #masthead .well {
+            margin-top: 31px;
+            min-height: 127px;
+        }
+
+        .navbar.affix {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .story-img {
+            margin-top: 25%;
+            display: block;
+        }
+
+        a, a:hover {
+            color: #223344;
+            text-decoration: none;
+        }
+
+        .icon-bar {
+            background-color: #fff;
+        }
+
+        @media screen and (min-width: 768px) {
+            #masthead h1 {
+                font-size: 80px;
+            }
+        }
+
+        .dropdown-menu {
+            min-width: 250px;
+        }
+
+        .panel {
+            border-color: transparent;
+            border-radius: 0;
+        }
+
+        .thumbnail {
+            margin-bottom: 8px;
+        }
+
+        .img-container {
+            overflow: hidden;
+            height: 170px;
+        }
+
+        .img-container img {
+            min-width: 280px;
+            min-height: 180px;
+            max-width: 380px;
+            max-height: 280px;
+        }
+
+        .txt-container {
+            overflow: hidden;
+            height: 100px;
+        }
+
+        .panel .lead {
+            overflow: hidden;
+            height: 90px;
+        }
+
+        .label-float {
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            opacity: .9;
+            padding: 6px;
+            color: #fff;
+        }
+
+        #view {
+
+            text-align: left;
+            font-size: large;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.428571429;
+        }
+
+        #about {
+
+            text-align: left;
+            font-size: large;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.428571429;
+        }
+
+        #title {
+            margin-right: 671px;
+            margin-bottom: 8px;
+            margin-top: 13px;
+        }
+
+        #titleAbout {
+            margin-right: 370px;
+            margin-bottom: 8px;
+            margin-top: 13px;
+        }
+
+        #readmore {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.428571429;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            margin-right: 831px;
+            margin-left: -14px;
+            margin-top: -62px;
+        }
+
+        .popover {
+            max-width: 1000px;
+        }
+
+        #img1:hover {
+            height: 400px;
+        }
+
+        .btn-twitter {
+            background-color: #4099FF;
+            color: #fff;F
+        }
+
+        .btn-facebook {
+            background-color: #3B5998;
+            color: #fff;
+        }
+
+        .btn-google-plus {
+            background-color: #d34836;
+            color: #fff;
+        }
+
+        .btn-twitter:hover {
+            background-color: #3088FF;
+            color: #62BBFF;
+        }
+
+        .btn-facebook:hover {
+            background-color: #2A4998;
+            color: #4C6BBA;
+        }
+
+        .btn-google-plus:hover {
+            background-color: #C23836;
+            color: #E45A58;
+        }
+
+    </style>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+</head>
+
+<!-- HTML code from Bootply.com editor -->
+
+<body data-ng-controller="mainCtrl" >
+
+<header class="navbar navbar-default navbar-fixed-top" role="banner" style="background-color: #000000 ;height: 48px">
+    <div class="container">
+        <div class="navbar-header" >
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation" >
+            <ul class="nav navbar-nav" style="background-color: #000000;height: 48px ;font-size: 20px">
+
+                <li>
+                    <a href="#userDashBoard" class="navbar-brand">DashBoard</a>
+                </li>
+
+                <li>
+
+
+
+                    <ul class="nav navbar-nav pullright">
+                        <li style="margin-top: 9px">
+
+                            <input auto-complete ui-items="names" ng-model="selected">
+
+                        </li>
+                        <li>
+                            <a href="#/search/{{searchTitle}}"><i class="glyphicon glyphicon-search"></i></a>
+                        </li>
+                        <div style="background-color: #ff0000">
+
+                        <li style=" text-align:center;background-color:#ffffff"data-ng-repeat=" word in list">
+                            <a href="" data-ng-model="searchTitle" data-ng-click="searchTitle" >{{word}}
+                            </a>
+                                <br>
+
+                            </li>
+                        </div>
+
+
+
+
+                    </ul>
+
+
+                <li>
+                    <a href="" class="pullright navbar-brand" style="margin-left: 660px;margin-top: -10px ;color: #ffffff"data-ng-click="logout()">logout</a>
+                </li>
+
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+
+
+
+
+
+</header>
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12" data-ng-view>
+
+
+                </div>
+            </div>
+
+
+
+        </div><!--/col-12-->
+
+<footer class="navbar-fixed-bottom" style="height: 0%;background-color: #000000">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+
+            </div>
+            <div class="col-sm-6">
+                <p style="color: #ffffff" class="pull-right">Built with <i class="icon-heart-empty"></i> By  NodeJS </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="javascript/angularroot.js"></script>
+    <script src="javascript/myangularForAccount.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <!-- Include Bootstrap Asserts JavaScript Files. -->
+    <script type="text/javascript" src="javascript/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="javascript/jquery.validate.js"></script>
+    <script type="text/javascript" src="javascript/markdown.js"></script>
+
+    <!-- Include  autocomplete . -->
+    <script src="http://angular-ui.github.com/bootstrap/ui-bootstrap-tpls-0.2.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+</footer>
+</body>
+</html>

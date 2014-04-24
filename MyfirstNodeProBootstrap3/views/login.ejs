@@ -1,0 +1,114 @@
+<% include header %>
+<body>
+<% include blog-mathead %>
+
+<div class="container">
+    <div class="row">
+        <div class="span8">
+            <div class="container">
+                <div class="row">
+                    <div class="span8">
+                        <form class="form-horizontal" id="registerHere" method='post' action='/login'>
+                            <fieldset>
+                                <legend>Login Please!!</legend>
+                                <div class="control-group">
+                                    <label class="control-label">Name</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-medium" id="user_name" name="user_name" rel="popover" data-content="Enter your first and last name." data-original-title="Full Name">
+                                    </div>
+                                </div>
+
+
+                                <div class="control-group">
+                                    <label class="control-label">Email</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-medium" id="user_email" name="user_email" rel="popover" data-content="What’s your email address?" data-original-title="Email">
+                                    </div>
+                                </div>
+
+
+                                <div class="control-group">
+                                    <label class="control-label"></label>
+
+                                    <div class="controls">
+                                        <button type="submit" class="btn btn-success" style="float: left ;margin-right: 5px">Sign In</button>
+                                    </div>
+                                    <div class="controls">
+                                        <button type="button" class="btn btn-success"><a href="signup">signUp</a></button>
+                                    </div>
+                                    <div>
+                                    <a href="/auth/google"> <img src="images/google.png" style="float:left ;width: 5%"
+                                                                 alt="Demo"></a>
+                                    <a href="/auth/facebook" ><img src="images/facebook (1).ico"
+                                                                   style="float:left ;width: 5%" alt="Demo" ></a>
+                                    <a href="/auth/twitter" ><img src="images/Twitter.ico" style="float:left ;width: 5%"
+                                                                  alt="Demo" ;width: 5%></a>
+                                    <a href="/auth/github" ><img src="images/github.ico" style="float:left ;width: 5%"
+                                                                 alt="Demo"></a>
+                                    <br>
+                                        </div>
+
+                                </div>
+
+
+                            </fieldset>
+                        </form>
+
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                console.log("document is ready!!!!!!!!!!!!!!!!!!!", $('#registerHere input'));
+
+
+
+
+// Popover
+                                $('#registerHere input').hover(function () {
+
+                                    console.log("document is ready!!!!!!!!!!!!!hello!!!!!!");
+
+                                    $(this).popover('show')
+                                });
+
+// Validation
+                                $("#registerHere").validate({
+                                    rules: {
+                                        user_name: "required",
+                                        user_email: {required: true, email: true},
+                                        pwd: {required: true, minlength: 6},
+                                        cpwd: {required: true, equalTo: "#pwd"},
+                                        gender: "required"
+                                    },
+
+                                    messages: {
+                                        user_name: "Enter your first and last name",
+                                        user_email: {
+                                            required: "Enter your email address",
+                                            email: "Enter valid email address"},
+                                        pwd: {
+                                            required: "Enter your password",
+                                            minlength: "Password must be minimum 6 characters"},
+                                        cpwd: {
+                                            required: "Enter confirm password",
+                                            equalTo: "Password and Confirm Password must match"},
+                                        gender: "Select Gender"
+                                    },
+
+                                    errorClass: "help-inline",
+                                    errorElement: "span",
+                                    highlight: function (element, errorClass, validClass) {
+                                        $(element).parents('.control-group').addClass('error');
+                                    },
+                                    unhighlight: function (element, errorClass, validClass) {
+                                        $(element).parents('.control-group').removeClass('error');
+                                        $(element).parents('.control-group').addClass('success');
+                                    }
+                                });
+                            });
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+
+<%include footer%>

@@ -1,0 +1,37 @@
+<div class="panel" data-ng-repeat="obj in arrayOfblogObj">
+    <div class="panel-body">
+        <div class="row">
+            <br>
+
+            <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-img" href="#"><img src="ajay.JPG" style="width:100px;height:100px"
+                                                   class="img-circle"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3 data-loading-text="convert()">  {{obj.BlogTitle}}</h3>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p  style="height: 122px;overflow: hidden;" data-ng-bind-html="bindContent(obj.BlogContent)"> </p>
+
+                        <p class="lead">
+                            <button class="btn btn-default"><a href="#/readBlog/{{obj.BlogTitle}}">Read More</a></button>
+                        </p>
+                        <p class="pull-right">
+
+                            <span
+                                class="label label-default"><a href="#/authorEditBlog/{{obj.BlogTitle}}">edit</a> </span></p>
+                        <ul class="list-inline">
+                            <li><a href="#">By {{obj.BlogAuthor.name}} ON 02-09-2012 </a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-comment"></i> {{obj.BlogComments.length|count:'comment'}}</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-share"></i>{{obj.BlogLikes.length|count:'share'}}</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3"></div>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        <hr>
+        <!--/stories-->
+    </div>
+</div>

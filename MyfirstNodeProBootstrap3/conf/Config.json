@@ -1,0 +1,17 @@
+{
+    "common": {
+
+    },
+    "development": {
+        "yo": "yo dev config"
+    },
+    "qa": {
+
+    },
+    "test": {
+
+    },
+    "production": {
+
+    }
+}

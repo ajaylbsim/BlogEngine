@@ -1,0 +1,52 @@
+<% include header %>
+<body>
+<% include blog-mathead %>
+
+<div class="container " style="width: 570px;height: 270px; background-color: honeydew" >
+<p style="margin: 0 0 10px;margin-left: 158px;margin-right: 220px;background-color: whitesmoke;">Please reenter your deatails</p>
+    <div class="row">
+        <div class="span8">
+
+            <div id="preview-container" style=" width:268px; height:220px;margin-left: 177px;margin-top: 20px;float: left;padding-top: 10px; background-color: honeydew">
+
+            <form method="post" action="/login">
+
+                <div class="control-group">
+                    <label class="control-label">User Name</label>
+
+                    <div class="controls">
+                        <input type="text" class="input-medium" id="user_name" name="user_name" rel="popover"
+                               data-content="Enter your first and last name." data-original-title="Full Name">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Email</label>
+
+                    <div class="controls">
+                        <input type="text" class="input-medium" id="user_email" name="user_email" rel="popover"
+                               data-content="What’s your email address?" data-original-title="Email">
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label"></label>
+
+                    <div class="controls">
+                        <button type="submit" class="btn btn-success">Sign In</button>
+                    </div>
+
+                </div>
+
+
+            </form>
+
+
+</div>
+
+        </div>
+    </div>
+</div>
+
+<%include footer%>>

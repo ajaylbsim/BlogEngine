@@ -1,0 +1,41 @@
+
+<%include header%>
+<body>
+<%include blog-mathead%>
+<%include profile-menu%>
+
+
+
+<div id="text-container">
+    <p id="texttop">Write your blog here      <a id="a" href="javascripts/markdown_cheatsheet.pdf">Editor-help</a></p>
+    <textarea  id="text-input" oninput="this.editor.update()"
+               rows="6" cols="60"></textarea>
+</div>
+
+
+<div id="preview-container">
+    <p id="divtop">View  your blog here     </p>
+    <div id="preview" style="height:265px;width: 440px;  background-color: honeydew;
+" rows="6" cols="60"></div>
+</div>
+<script src="javascripts/markdown.js"
+        ></script>
+<script>
+    function Editor(input, preview) {
+        this.update = function () {
+
+            preview.innerHTML = markdown.toHTML(input.value);
+
+
+            console.log(preview.innerHTML);
+
+        };
+        input.editor = this;
+        this.update();
+    }
+    var $ = function (id) {
+        return document.getElementById(id);
+    };
+    new Editor($("text-input"), $("preview"));
+</script>
+<%include footer%>

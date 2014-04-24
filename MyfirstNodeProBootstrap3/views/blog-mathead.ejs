@@ -1,0 +1,15 @@
+
+<div class="blog-masthead" style="background-color: #000000">
+    <div class="container">
+        <nav class="blog-nav">
+            <a class="blog-nav-item active" href="/">{{Home|uppercase}}</a>
+            <a class="blog-nav-item" href="#">{{Newfeatures|uppercase}}</a>
+            <a class="blog-nav-item" href="#/viewBlog">{{Viewblog|uppercase}}</a>
+            <!--href=displayAuthor-->
+            <a class="blog-nav-item" href="#">{{ViewAuthor|uppercase}}</a>
+<a  ng-show={{logout}} class="blog-nav-item"  id="createBlogTag" href="#/createBlog"  >{{CreateBlog|uppercase}}</a>
+            <a class="blog-nav-item pull-right"  id="login"ng-href={{login_href}} ng-model="login" ng-show="{{login}}" >{{login|uppercase}}</a>
+
+        </nav>
+    </div>
+</div>
