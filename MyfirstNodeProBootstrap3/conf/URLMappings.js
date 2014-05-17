@@ -16,7 +16,7 @@ else
 
 }
 }
-
+//cool changes in master
 //URL Mappings+
 _app.get('/', controllers.views.home);
 //_app.get('/visitorsBlog', controllers.views.visitorsBlog);
