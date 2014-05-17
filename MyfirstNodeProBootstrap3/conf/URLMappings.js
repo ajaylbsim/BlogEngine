@@ -16,6 +16,7 @@ else
 
 }
 }
+//master made change after amit
 //cool changes in master
 //URL Mappings+
 _app.get('/', controllers.views.home);
