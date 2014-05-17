@@ -16,6 +16,7 @@ else
 
 }
 }
+// this change made by amit 
 //cool changes in master
 //URL Mappings+
 _app.get('/', controllers.views.home);
